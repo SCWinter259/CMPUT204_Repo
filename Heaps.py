@@ -62,7 +62,7 @@ def heapExtractMax(array):
 def heapIncreaseKey(array, index, key):
     '''
     Replace the value of a node with a larger
-    vaue, then move the node to the right place
+    value, then move the node to the right place
     '''
     array[index] = key
     while (index > 0) and (array[Parent(index)] < array[index]):
