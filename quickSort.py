@@ -1,11 +1,18 @@
 import random
 
 def randomPartition(array, first, last):
+    '''
+    This function will randomize the partition position
+    and then use partition like normal
+    '''
     index = random.randint(first, last)
     array[index], array[last] = array[last], array[index]
     return partition(array, first, last)
 
 def partition(array, first, last):
+    '''
+    This function moves the pivot and switch numbers
+    '''
     mark_value = array[last]
     # pivot would mark the index of the last 
     # element smaller than mark_value
@@ -19,6 +26,10 @@ def partition(array, first, last):
     return pivot + 1
 
 def quickSort(array, first, last):
+    '''
+    This fucntion sorts the array in-place
+    '''
+    # first and last are for indexes, not first and last elements
     if first < last:
         # pivot = partition(array, first, last)
         pivot = randomPartition(array, first, last)

@@ -1,5 +1,8 @@
 # MergeSort in ascending order
 def merge(left, right):
+    '''
+    This function does the merging and switching
+    '''
     result = []
     i, j = 0, 0
     while (i < len(left)) and (j < len(right)):
@@ -16,6 +19,10 @@ def merge(left, right):
     return result
 
 def mergeSort(array):
+    '''
+    This fucntion cuts the array in half recursively 
+    while calling merge
+    '''
     if len(array) <= 1:
         return array
     else:
